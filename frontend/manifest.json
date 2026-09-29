@@ -1,0 +1,78 @@
+{
+  "manifest_version": 3,
+  "name": "PAROKSH — AI Browser Agent",
+  "version": "1.0.0",
+  "description": "Privacy-first Vision-AI browser agent with on-device ONNX PII detection and redaction.",
+  "icons": {
+    "16": "frontend/icons/icon16.png",
+    "32": "frontend/icons/icon32.png",
+    "48": "frontend/icons/icon48.png",
+    "128": "frontend/icons/icon128.png"
+  },
+  "action": {
+    "default_title": "PAROKSH — AI Browser Agent (click to open)",
+    "default_icon": {
+      "16": "frontend/icons/icon16.png",
+      "32": "frontend/icons/icon32.png",
+      "48": "frontend/icons/icon48.png",
+      "128": "frontend/icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "extension-core/background.js",
+    "type": "module"
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "debugger",
+    "offscreen",
+    "downloads"
+  ],
+  "host_permissions": [
+    "http://localhost:3000/*",
+    "<all_urls>"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; worker-src 'self'; object-src 'self'"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "extension-core/action-executor.js",
+        "extension-core/content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "frontend/popup.html",
+        "frontend/assets/*",
+        "frontend/icons/*"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    },
+    {
+      "resources": [
+        "privacy-shield/*",
+        "privacy-shield/retinaface_r50.onnx",
+        "privacy-shield/lib/*",
+        "privacy-shield/tessdata/*",
+        "privacy-shield/vendor/*",
+        "privacy-shield/vendor/onnxruntime-web/*",
+        "privacy-shield/vendor/tesseract/*",
+        "privacy-shield/vendor/tesseract-core/*"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}

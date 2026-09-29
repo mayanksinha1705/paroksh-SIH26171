@@ -1,0 +1,18 @@
+{
+  "name": "paroksh-backend",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "PAROKSH model backend — hosts the Gemma action model and chat model behind HTTP.",
+  "main": "server.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

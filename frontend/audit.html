@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PAROKSH Session Dashboard</title>
+    <link rel="stylesheet" href="audit.css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <div>
+          <p class="eyebrow">PAROKSH</p>
+          <h1>Session dashboard</h1>
+          <p class="muted">Local audit data for this browser session. Screenshots shown here are already redacted. Summary cards show what was detected.</p>
+        </div>
+        <button id="refresh" class="primary">Refresh</button>
+      </header>
+      <section id="summary" class="summary"></section>
+      <section>
+        <h2>Session estimates</h2>
+        <div id="estimates" class="summary"></div>
+        <p class="muted metric-note">Estimates are calculated from measurements collected during this browser session.</p>
+      </section>
+      <section>
+        <h2>Evaluation metrics</h2>
+        <div id="metrics" class="metric-list"></div>
+      </section>
+      <section>
+        <h2>Performance matrix</h2>
+        <div id="performanceMatrix" class="performance-matrix"></div>
+        <p class="muted metric-note">Values marked estimated/provisional are supplied benchmark estimates. Session cards and screenshots below continue to use measurements from this browser session.</p>
+      </section>
+      <section>
+        <h2>Completed tasks</h2>
+        <div id="tasks" class="task-list"></div>
+      </section>
+      <section>
+        <h2>Redacted screenshots</h2>
+        <div id="screenshots" class="gallery"></div>
+      </section>
+      <p id="error" class="error"></p>
+    </main>
+    <script src="audit.js"></script>
+  </body>
+</html>
