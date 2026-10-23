@@ -330,6 +330,7 @@ On first load, the extension downloads the local ONNX models into the offscreen 
 | Mayank Sinha | Member |
 | Abhimanyu Sahu | Member |
 | Adarsh Sharma | Member |
+| Uday Yadav | Member |
 
 ---
 
