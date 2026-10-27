@@ -315,7 +315,7 @@ On first load, the extension downloads the local ONNX models into the offscreen 
 - ONNX Runtime Web — [onnxruntime.ai/docs/tutorials/web](https://onnxruntime.ai/docs/tutorials/web)
 - Microsoft OmniParser — [github.com/microsoft/OmniParser](https://github.com/microsoft/OmniParser)
 
-**Code:** [github.com/mayanksinha17](https://github.com/mayanksinha17)
+**Code:** [github.com/mayanksinha17](https://github.com/mayanksinha1705)
 
 ---
 
